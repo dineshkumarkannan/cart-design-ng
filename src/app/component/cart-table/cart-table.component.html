@@ -1,0 +1,12 @@
+<div>
+  <div class="title">Selected Items</div>
+  <ul *ngIf="items.length > 0; else Nodata">
+    <li *ngFor="let val of items">
+      <div>{{ val.name | uppercase }}</div>
+      <div>{{ val.count }}</div>
+    </li>
+  </ul>
+  <ng-template #Nodata>
+    <div class="no-item">Yet to Select Item's :)</div>
+  </ng-template>
+</div>

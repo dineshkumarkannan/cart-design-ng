@@ -1,0 +1,14 @@
+<div class="container" *ngIf="data">
+  <img src="./../../../assets/images/{{ data.img }}.jpg" alt="shoe" />
+  <div class="card-footer">
+    <div class="title">{{ data.name }}</div>
+    <div *ngIf="data?.cartCount === 0" class="btn-addToCart" (click)="add()">
+      Add to cart
+    </div>
+    <div class="change-cart" *ngIf="data?.cartCount > 0">
+      <div class="circle decrement" (click)="change('DELETE')"></div>
+      <div class="input-box">{{ data.cartCount }}</div>
+      <div class="circle increment" (click)="change('ADD')"></div>
+    </div>
+  </div>
+</div>

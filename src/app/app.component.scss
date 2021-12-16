@@ -1,0 +1,40 @@
+.continer {
+  display: flex;
+}
+
+.cards-section {
+  width: 75%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  & > * {
+    flex: 1 1 25%;
+    margin: 6px 4px;
+  }
+}
+
+.cart-section {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  top: 10px;
+  height: 80vh;
+  position: sticky;
+}
+
+@media only screen and (max-width: 600px) {
+  .continer {
+    display: inline-block;
+    & > * {
+      width: 100%;
+    }
+  }
+  .cards-section {
+    display: block;
+    padding: 0;
+    & > * {
+      margin: 6px 0;
+    }
+  }
+}
